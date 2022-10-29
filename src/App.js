@@ -8,11 +8,11 @@ function App() {
     <Container>
       <h1>FACL Locker Room</h1>
       <Row>
-        <Col xm={12} md={8}>
+        <Col xs={12} md={8}>
           <h2>Account List</h2>
           <AccountList />
         </Col>
-        <Col xm={12} md={4}>
+        <Col xs={12} md={4}>
           <h2>Add Account</h2>
           <Form />
         </Col>
