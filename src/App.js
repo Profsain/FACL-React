@@ -14,19 +14,20 @@ function App() {
       .then((data) => setAccounts(data));
   }, []);
 
-  console.log('Accounts Data: ', accounts);
   return (
-    <Container>
-      <Row>
-        <Col xs={12} md={8}>
-          <AccountList accounts={accounts}/>
-        </Col>
-        
-        <Col xs={12} md={4}>
-          <FormComponent />
-        </Col>
-      </Row>
-    </Container>
+    <div class="container">
+      <Container>
+        <Row>
+          <Col xs={12} md={8}>
+            <AccountList accounts={accounts} />
+          </Col>
+
+          <Col xs={12} md={4}>
+            <FormComponent accountsProps={{accounts, setAccounts}}/>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
