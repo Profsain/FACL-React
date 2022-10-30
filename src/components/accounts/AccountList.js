@@ -1,13 +1,15 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import './AccountList.css';
 
 export const AccountList = ({accounts}) => {
-  console.log('AccountList Component: ', accounts);
+
   return (
-    <div>
-      <h2>List of accounts</h2>
-      <Table>
-        <thead>
+    <>
+      <h4 className='Title'>List of accounts</h4>
+      <div className='Accounts-container'>
+      <Table responsive bordered>
+        <thead className='T-head'>
           <tr>
             <th>Full Name</th>
             <th>Gender</th>
@@ -31,5 +33,6 @@ export const AccountList = ({accounts}) => {
         </tbody>
       </Table>
     </div>
+    </>
   )
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { AccountList } from './components/AccountList';
-import { FormComponent } from './components/FormComponent';
+import { AccountList } from './components/accounts/AccountList';
+import { FormComponent } from './components/form/FormComponent';
 import './App.css';
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
   }, []);
 
   return (
-    <div class="container">
-      <Container>
+    <div className="App">
+      <div class="container-fluid">
         <Row>
           <Col xs={12} md={8}>
             <AccountList accounts={accounts} />
@@ -26,7 +26,7 @@ function App() {
             <FormComponent accountsProps={{accounts, setAccounts}}/>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 }

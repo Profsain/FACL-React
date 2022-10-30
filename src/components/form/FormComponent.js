@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './FormComponent.css';
 
 export const FormComponent = ({accountsProps}) => {
  
@@ -75,8 +76,8 @@ export const FormComponent = ({accountsProps}) => {
     
   }
   return (
-    <div class="container">
-      <h2>Create account</h2>
+    <div className='Form-container'>
+      <h4>Create account</h4>
       <form onSubmit={submitHandler}>
         <div class="form-group mb-3">
           <input
@@ -98,7 +99,7 @@ export const FormComponent = ({accountsProps}) => {
             onChange={onChangeHandler}
           />
         </div>
-        <div class="form-group mb-3">
+        <div class="form-group mb-3 checkBox">
           <div class="form-check">
             <input
               class="form-check-input"
@@ -148,7 +149,7 @@ export const FormComponent = ({accountsProps}) => {
           />
         </div>
         <div class="form-group mb-3">
-          <select class="custom-select" name="nationality" onChange={onChangeHandler}>
+          <select class="form-control form-select" name="nationality" onChange={onChangeHandler}>
             <option>Nationality </option>
             {nationalityList.map((national = {}) => (
               <option 
@@ -161,7 +162,7 @@ export const FormComponent = ({accountsProps}) => {
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-secondary px-5">Submit</button>
       </form>
     </div>
   )
