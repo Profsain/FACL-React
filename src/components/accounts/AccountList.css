@@ -1,0 +1,19 @@
+.Accounts-container {
+  margin: 18px 58px 0 58px;
+  background-color: #fff;
+}
+
+.T-head {
+  background-color: #e8e8e8;
+}
+
+.Title {
+  margin: 58px 58px 0 58px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .Accounts-container {
+    margin: 18px 0 58px 0;
+  }
+}
