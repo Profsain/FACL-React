@@ -1,9 +1,8 @@
 .Form-container {
-  margin: 18px 58px 0 58px;
+  /* margin: 18px 58px 0  58px; */
   background-color: #fff;
   height: 100vh;
-  width: 100%;
-  padding: 28px;
+  padding: 58px 28px;
   margin: auto;
 }
 
@@ -15,7 +14,6 @@
 .form-control:focus {
   box-shadow: 2px 6px 4px -3px rgba(158,158,158,1) !important;
   border: 0 !important;
-  background-color: #f3f3f3 !important;
 }
 
 .checkBox {
@@ -28,4 +26,12 @@
 .checkBox input {
   border: none !important;
   background-color: #f3f3f3;
+}
+
+button {
+  border-radius: 25px !important;
+}
+
+button:hover {
+  background-color: #987899 !important;
 }

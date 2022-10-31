@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './FormComponent.css';
 
-export const FormComponent = ({accountsProps}) => {
- 
+export const FormComponent = ({ accountsProps }) => {
+
   const [nationalityList, setNationalityList] = useState([]);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -11,7 +11,7 @@ export const FormComponent = ({accountsProps}) => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [nationality, setNationality] = useState('');
 
-  const {accounts , setAccounts} = accountsProps
+  const { accounts, setAccounts } = accountsProps
 
   // fetch nationality list from api
   useEffect(() => {
@@ -61,7 +61,8 @@ export const FormComponent = ({accountsProps}) => {
   // Submit form data and update accounts list
   const submitHandler = (event) => {
     event.preventDefault();
-    
+
+    // New account object from form data
     const newAccount = {
       firstName: firstName,
       lastName: lastName,
@@ -73,10 +74,11 @@ export const FormComponent = ({accountsProps}) => {
     // update accounts list
     setAccounts([...accounts, newAccount])
     clearInputField();
-    
+
   }
+
   return (
-    <div className='Form-container'>
+    <div className="Form-container">
       <h4>Create account</h4>
       <form onSubmit={submitHandler}>
         <div class="form-group mb-3">
@@ -87,6 +89,7 @@ export const FormComponent = ({accountsProps}) => {
             placeholder="First name"
             value={firstName}
             onChange={onChangeHandler}
+            required
           />
         </div>
         <div class="form-group mb-3">
@@ -97,6 +100,7 @@ export const FormComponent = ({accountsProps}) => {
             placeholder="Last Name"
             value={lastName}
             onChange={onChangeHandler}
+            required
           />
         </div>
         <div class="form-group mb-3 checkBox">
@@ -108,6 +112,7 @@ export const FormComponent = ({accountsProps}) => {
               id="male"
               value="M"
               onChange={onChangeHandler}
+              required
             />
             <label class="form-check-label" for="male">
               Male
@@ -121,13 +126,13 @@ export const FormComponent = ({accountsProps}) => {
               id="female"
               value="F"
               onChange={onChangeHandler}
+              required
             />
             <label class="form-check-label" for="female">
               Female
             </label>
           </div>
         </div>
-
         <div class="form-group mb-3">
           <input
             type="email"
@@ -136,6 +141,7 @@ export const FormComponent = ({accountsProps}) => {
             placeholder="Email Address"
             value={emailAddress}
             onChange={onChangeHandler}
+            required
           />
         </div>
         <div class="form-group mb-3">
@@ -146,13 +152,19 @@ export const FormComponent = ({accountsProps}) => {
             placeholder="Mobile Number"
             value={mobileNumber}
             onChange={onChangeHandler}
+            required
           />
         </div>
         <div class="form-group mb-3">
-          <select class="form-control form-select" name="nationality" onChange={onChangeHandler}>
+          <select
+            class="form-control form-select"
+            name="nationality"
+            onChange={onChangeHandler}
+            required
+          >
             <option>Nationality </option>
             {nationalityList.map((national = {}) => (
-              <option 
+              <option
                 key={national.cca2}
                 value={national.name.common}
               >

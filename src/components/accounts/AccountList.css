@@ -11,3 +11,9 @@
   margin: 58px 58px 0 58px;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .Accounts-container {
+    margin: 18px 0 58px 0;
+  }
+}
