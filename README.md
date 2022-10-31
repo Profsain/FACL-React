@@ -3,7 +3,7 @@ FACL Web Developer Internship Assessment test.
 A React web app that fetch data from an API endpoint, display list of users data and create new user via form.
 
 ### Live Demo
-[Scandi-Store:](#)
+[Scandi-Store:](https://helpful-sundae-ccb627.netlify.app/)
 
 
 ## Built With
